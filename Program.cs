@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 string? s=builder.Configuration["Jwt:Key"];
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddDbContext<AppDbContext>(options=>options.UseNpgsql(builder.Configuration.GetConnectionString("UserDb")));
+builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("UserDb")));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options=>
 options.TokenValidationParameters=new TokenValidationParameters{

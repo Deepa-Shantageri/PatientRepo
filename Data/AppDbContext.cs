@@ -11,20 +11,12 @@ namespace Product_api.Data
             
         }
         public DbSet<User> Users=>Set<User>();
-          //public DbSet<Product> Products=>Set<Product>();
-        // protected override void OnModelCreating(ModelBuilder modelBuilder)
-        // {
-        //     modelBuilder.Entity<Product>().HasData(
-        //         new Product{Id=1,ProductName="Laptop",Price=100000},
-        //          new Product{Id=2,ProductName="Mouse",Price=20000}
-        //     );
-        //     base.OnModelCreating(modelBuilder);
-        // }
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if(!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Server=localhost;Port=5433;Database=users;Username=postgres;Password=Deepamanju12#$");
+                optionsBuilder.UseNpgsql("Server=tcp:patientserver.database.windows.net,1433;Initial Catalog=PatientDb;Persist Security Info=False;User ID=saadmin;Password=Deepamanju12#$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
     }
