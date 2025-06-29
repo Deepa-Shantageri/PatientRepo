@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -8,6 +9,8 @@ using Product_api.Data;
 using Product_api.model;
 
 namespace Loginapi.Controller{
+    
+     [EnableCors("Patientpolicy")]
     [ApiController]
     [Route("api/[controller]")]
     public class LoginController:ControllerBase

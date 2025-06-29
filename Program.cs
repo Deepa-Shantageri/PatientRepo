@@ -9,7 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
-string? s=builder.Configuration["Jwt:Key"];
+
+
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("UserDb")));
@@ -23,6 +25,11 @@ ValidIssuer=builder.Configuration["Jwt:Issuer"],
 ValidAudience=builder.Configuration["Jwt:Audiance"],
 IssuerSigningKey =new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
 });
+
+builder.Services.AddCors(options=>options.AddPolicy("Patientpolicy",policy=>{
+    policy.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader();
+}));
+
 var app = builder.Build();
 using (var scope=app.Services.CreateScope())
 {
@@ -38,7 +45,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
-
+app.UseCors("Patientpolicy");
 app.UseAuthorization();
 
 app.MapControllers();

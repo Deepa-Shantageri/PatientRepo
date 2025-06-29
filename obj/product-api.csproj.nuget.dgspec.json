@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/manjunathashiddappagaji/Documents/dotnetVsCodeWebapi/product-api/product-api.csproj": {}
+    "/Users/manjunathashiddappagaji/Documents/Patient Management /dotnetVsCodeWebapi/product-api/product-api.csproj": {}
   },
   "projects": {
-    "/Users/manjunathashiddappagaji/Documents/dotnetVsCodeWebapi/product-api/product-api.csproj": {
+    "/Users/manjunathashiddappagaji/Documents/Patient Management /dotnetVsCodeWebapi/product-api/product-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/manjunathashiddappagaji/Documents/dotnetVsCodeWebapi/product-api/product-api.csproj",
+        "projectUniqueName": "/Users/manjunathashiddappagaji/Documents/Patient Management /dotnetVsCodeWebapi/product-api/product-api.csproj",
         "projectName": "product-api",
-        "projectPath": "/Users/manjunathashiddappagaji/Documents/dotnetVsCodeWebapi/product-api/product-api.csproj",
+        "projectPath": "/Users/manjunathashiddappagaji/Documents/Patient Management /dotnetVsCodeWebapi/product-api/product-api.csproj",
         "packagesPath": "/Users/manjunathashiddappagaji/.nuget/packages/",
-        "outputPath": "/Users/manjunathashiddappagaji/Documents/dotnetVsCodeWebapi/product-api/obj/",
+        "outputPath": "/Users/manjunathashiddappagaji/Documents/Patient Management /dotnetVsCodeWebapi/product-api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/manjunathashiddappagaji/.nuget/NuGet/NuGet.Config"
@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.6, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
