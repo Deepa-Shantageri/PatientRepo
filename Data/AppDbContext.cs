@@ -16,7 +16,7 @@ namespace Product_api.Data
         {
             if(!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Server=tcp:patientserver.database.windows.net,1433;Initial Catalog=PatientDb;Persist Security Info=False;User ID=saadmin;Password=Deepamanju12#$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("Server=tcp:patientserver.database.windows.net,1433;Initial Catalog=PatientDb;Persist Security Info=False;User ID=saadmin;Password=Deepamanju12#$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
     }
